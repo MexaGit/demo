@@ -1,0 +1,10 @@
+logging:
+  level:
+    com.example.demo: debug
+
+server.error.include-message: always
+management.endpoints.web.exposure.include: '*'
+
+miurls:
+  database:
+    test: "htpps://mibasededatos.com"
