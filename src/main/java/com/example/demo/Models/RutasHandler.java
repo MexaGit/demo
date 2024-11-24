@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.Models;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +16,7 @@ public class RutasHandler {
     @ExceptionHandler(NullPointerException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public String handleNullPointer(NullPointerException exception){
-        logger.error(exception.getMessage());
-        return "Internal error. Contact support.";
+        logger.info(exception.getMessage());
+        return "Internal Error contact support";
     }
 }
