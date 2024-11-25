@@ -1,5 +1,6 @@
 package com.example.demo;
 
+<<<<<<< Updated upstream
 import com.example.demo.models.Libro;
 import com.example.demo.models.Prodcuto;
 import com.example.demo.models.UserDAta;
@@ -7,6 +8,10 @@ import com.example.demo.mybeans.MiComponente;
 import com.example.demo.servicios.IOrderService;
 import com.example.demo.servicios.OrderService;
 import com.example.demo.mybeans.MiBean;
+=======
+import com.example.demo.Models.Libro;
+import com.example.demo.Models.UserData;
+>>>>>>> Stashed changes
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -95,12 +100,18 @@ public class Rutas {
     public ResponseEntity<String> getUserData(){
         return ResponseEntity
                 .status(HttpStatus.OK)
+<<<<<<< Updated upstream
                 .header("Content-Type", "application/jason")
                 .body("{\"name\": \"mary\"}");
+=======
+                .header("Content-Type", "application/json")
+                .body("{\"name\":\"mary\"}");
+>>>>>>> Stashed changes
     }
 
     @GetMapping("/userData/v2")
     public Map<String, Map<String, Object>> getUserDataV2(){
+<<<<<<< Updated upstream
         return Map.of("user", Map.of("name", "mary", "age",30));
     }
 
@@ -126,5 +137,16 @@ public class Rutas {
         miComponente.saludarDesdeComponente();
         return "Completado miComponente";
     }
+=======
+        return Map.of("user", Map.of("name", "mary", "age", 25));
+    }
+
+    @GetMapping("/userData/v3")
+    public UserData getUserDataV3(){
+        return new UserData("mary", 26);
+    }
+
+
+>>>>>>> Stashed changes
 
 }
