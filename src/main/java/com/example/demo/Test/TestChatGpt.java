@@ -4,15 +4,13 @@ import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-<<<<<<< Updated upstream
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-=======
+
 import java.util.Map;
->>>>>>> Stashed changes
+
 
 @RestController
 public class TestChatGpt {
@@ -51,7 +49,6 @@ public class TestChatGpt {
                 .body("El usuario fue creado correctamente");
     }
 
-<<<<<<< Updated upstream
     @GetMapping("/product/{id}")
     ResponseEntity<String> getProduct(@PathVariable int id) {
         if (id > 0) {
@@ -138,7 +135,7 @@ public class TestChatGpt {
                 .sorted()                         // Ordenar alfabéticamente
                 .collect(Collectors.toList());    // Recoger en una lista
     }
-=======
+
 //    @GetMapping("/product/{id}")
 //    ResponseEntity<String> getProduct(@PathVariable int id) {
 //        if (id > 0) {
@@ -149,9 +146,6 @@ public class TestChatGpt {
 //                    .body("El ID " + id + " no es válido.");
 //        }
 //    }
-
-    String noumber(){ return "";}
->>>>>>> Stashed changes
 }
 
 
