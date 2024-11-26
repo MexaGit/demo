@@ -77,4 +77,18 @@ public class Rutas {
     public int getCaulculo(@PathVariable int numero){
         throw new NullPointerException("Esta exception ocurrio porque esta informacion no debe saber el cliente");
     }
+
+    @GetMapping("/userData")
+    public ResponseEntity<String> getUserData(){
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .header("Content-Type", "application/jason")
+                .body("{\"name\": \"mary\"}");
+    }
+
+    @GetMapping("/userData/v2")
+    public Map<String, Map<String, Object>> getUserDataV2(){
+        return Map.of("user", Map.of("name", "mary", "age",30));
+    }
+
 }
