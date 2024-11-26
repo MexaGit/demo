@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+//Nuevo artifactory
 @RestController // Clases que definen rutas
 public class Rutas {
 
