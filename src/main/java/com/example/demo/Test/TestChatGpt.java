@@ -69,11 +69,6 @@ public class TestChatGpt {
         }
     }
 
-    @GetMapping("/verificar-edad")
-    public String verificarEdad2(@RequestParam(defaultValue = "desconocida") String edad) {
-        return "La edad proporcionada es: " + edad;
-    }
-
     @GetMapping("/usuario/{id}")
     public ResponseEntity<String> obtenerUsuario(@PathVariable int id) {
         if (id > 100){
